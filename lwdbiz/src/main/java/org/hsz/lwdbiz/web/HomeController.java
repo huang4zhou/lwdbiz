@@ -1,4 +1,4 @@
-package org.hsz.lwdbiz;
+package org.hsz.lwdbiz.web;
 
 import java.text.DateFormat;
 import java.util.Date;
