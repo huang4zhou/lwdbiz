@@ -15,7 +15,7 @@
 	<div id="wrapper">
 		<tiles:insertAttribute name="header" ignore="true"></tiles:insertAttribute>
 		<div id="content">
-			<tiles:insertAttribute name="name" ignore="true"></tiles:insertAttribute>
+			<tiles:insertAttribute name="content" ignore="true"/>
 		</div>
 		<tiles:insertAttribute name="footer" ignore="true"></tiles:insertAttribute>
 	</div>

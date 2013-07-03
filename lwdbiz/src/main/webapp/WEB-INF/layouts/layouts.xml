@@ -8,9 +8,11 @@
 		<put-attribute name="footer" value="/WEB-INF/views/footer.jspx" />
 	</definition>
 	
-	<definition name="home" template="/WEB-INF/layouts/default.jspx">
-		<put-attribute name="header" value="/WEB-INF/views/header.jspx" />
-		<put-attribute name="footer" value="/WEB-INF/views/footer.jspx" />
+	<definition name="home" extends="default">
 	</definition>
 	
+	<definition name="selectCategory" extends="default">
+		<put-attribute name="content" value="/WEB-INF/views/createOrders/selectCategory.jspx"/>
+	</definition>
+
 </tiles-definitions>

@@ -1,6 +1,9 @@
-<div xmlns:jsp="http://java.sun.com/JSP/Page">
+<div xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:spring="http://www.springframework.org/tags">
 	<jsp:directive.page contentType="text/html; charset=UTF-8" 
 		pageEncoding="UTF-8" session="false"/>
 	<jsp:output omit-xml-declaration="true" />
 	<h1>Welcome lwdbiz!</h1>
+	<spring:url value="/createOrders" var="createOrder" />
+	<a href="${createOrder}">Buy books</a>
 </div>
