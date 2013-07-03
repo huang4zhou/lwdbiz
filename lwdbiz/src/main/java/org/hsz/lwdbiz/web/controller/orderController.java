@@ -44,7 +44,7 @@ public class orderController {
 		/*for (Book book : bookstoreService.findBooksByCategory(categoryService.findById(orderForm.getCategoryId()))) {
 			selectableBooks.put(book.getId(), book.getTitle());
 		}*/
-		selectableBooks.put(new Long("100000"),"spring in action");
+		selectableBooks.put(102121L,"spring in action");
 		return selectableBooks;
 	}
 	
