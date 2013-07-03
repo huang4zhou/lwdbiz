@@ -6,8 +6,10 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
-
+	
 	<!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
+	
+	<beans:import resource="webflow-config.xml" />
 	
 	<!-- Enables the Spring MVC @Controller programming model -->
 	<annotation-driven />
@@ -23,6 +25,12 @@
 	
 	<context:component-scan base-package="org.hsz.lwdbiz" />
 	
+	<beans:bean class="org.springframework.webflow.mvc.servlet.FlowHandlerMapping">
+		<beans:property name="flowRegistry" ref="flowRegistry" />
+	</beans:bean>
 	
+	<beans:bean class="org.springframework.webflow.mvc.servlet.FlowHandlerAdapter">
+		<beans:property name="flowExecutor" ref="flowExecutor" />
+	</beans:bean>
 	
 </beans:beans>
