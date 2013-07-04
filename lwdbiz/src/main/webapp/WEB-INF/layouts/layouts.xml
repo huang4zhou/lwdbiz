@@ -14,5 +14,13 @@
 	<definition name="selectCategory" extends="default">
 		<put-attribute name="content" value="/WEB-INF/views/createOrders/selectCategory.jspx"/>
 	</definition>
+	
+	<definition name="selectBooks" extends="default">
+		<put-attribute name="content" value="/WEB-INF/views/createOrders/selectBooks.jspx"/>
+	</definition>
+	
+	<definition name="selectDeliveryOptions" extends="default">
+		<put-attribute name="content" value="/WEB-INF/views/createOrders/selectDeliveryOptions.jspx"/>
+	</definition>
 
 </tiles-definitions>

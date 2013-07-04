@@ -20,7 +20,8 @@ public class OrderForm implements Serializable {
 	private Long bookId;
 	private Integer quantity;*/
 	private Long categoryId;
-
+	
+	private Long bookId;
 	/*private String deliveryDate;
 	private String orderDate;
 
@@ -74,5 +75,13 @@ public class OrderForm implements Serializable {
 
 	public void setCategoryId(Long categoryId) {
 		this.categoryId = categoryId;
+	}
+
+	public Long getBookId() {
+		return bookId;
+	}
+
+	public void setBookId(Long bookId) {
+		this.bookId = bookId;
 	}
 }

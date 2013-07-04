@@ -5,29 +5,38 @@
         http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
 
 	<on-start>
-		<evaluate expression="orderController.initForm()"
-			result="flowScope.orderForm" />
+		<evaluate expression="orderController.initForm()" result="flowScope.orderForm" />
 		<evaluate expression="orderController.initSelectableCategories()"
 			result="flowScope.selectableCategories" />
 	</on-start>
-		
+
 	<view-state id="selectCategory" view="selectCategory" model="orderForm">
 		<transition on="next" to="selectBooks">
-			<evaluate
-				expression="orderController.initSelectableBooks(flowScope.orderForm)" 
+			<evaluate expression="orderController.initSelectableBooks(flowScope.orderForm)"
 				result="flowScope.selectableBooks" />
 		</transition>
 		<transition on="cancel" to="end" />
 	</view-state>
-	
-	<view-state id="selectBooks" view="selectBooks" model="orderForm" >
+
+	<view-state id="selectBooks" view="selectBooks" model="orderForm">
 		<transition on="previous" to="selectCategory" />
-			
-		<transition on="add" >
+
+		<transition on="add">
 			<evaluate expression="orderController.addBook(flowScope.orderForm)" />
+		</transition>
+
+		<transition on="next" to="selectDeliveryOptions" />
+
+		<transition on="cancel" to="end" />
+	</view-state>
+
+	<view-state id="selectDeliveryOptions" view="selectDeliveryOptions" model="orderForm">
+		<transition on="previous" to="selectBooks" />
+		<transition on="finish" to="end">
+			<evaluate expression="orderController.placeOrder(flowScope.orderForm)" />
 		</transition>
 		<transition on="cancel" to="end" />
 	</view-state>
-	
-	<end-state id="end" view="redirect:/"/>	
+
+	<end-state id="end" view="redirect:/" />
 </flow>

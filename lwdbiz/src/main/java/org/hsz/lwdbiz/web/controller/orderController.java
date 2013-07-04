@@ -37,6 +37,7 @@ public class orderController {
 	}
 	
 	public Map<Long, String> initSelectableBooks(OrderForm orderForm) {
+		logger.info("init selectable books..");
 		//orderForm.getSelectedBooks().clear();
 		//orderForm.resetSelectedBooks();
 
@@ -50,6 +51,10 @@ public class orderController {
 	
 	public void addBook(OrderForm orderForm) {
 		logger.info("add book");
+	}
+	
+	public void placeOrder(final OrderForm orderForm){
+		logger.info("place Order..." + orderForm.getCategoryId());
 	}
 	
 }
