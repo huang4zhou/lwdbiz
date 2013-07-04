@@ -1,4 +1,4 @@
 lwdbiz
 ======
 
-Light Weight Design business Architecture
+Light Weight Design For Business Architecture
