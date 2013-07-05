@@ -41,7 +41,7 @@ public class OrderController {
 	}
 	
 	public Map<Long, String> initSelectableBooks(OrderForm orderForm) {
-		logger.info("init selectable books.. category:" + orderForm.getCategory().getName());
+		//logger.info("init selectable books.. category:" + orderForm.getCategory().getName());
 		//orderForm.getSelectedBooks().clear();
 		//orderForm.resetSelectedBooks();
 
