@@ -6,11 +6,13 @@
 
 	<on-start>
 		<evaluate expression="orderController.initForm()" result="flowScope.orderForm" />
-		<evaluate expression="orderController.initSelectableCategories()"
-			result="flowScope.selectableCategories" />
 	</on-start>
 
 	<view-state id="selectCategory" view="selectCategory" model="orderForm">
+		<on-render>
+			<evaluate expression="orderController.initSelectableCategories()" 
+		result="requestScope.selectableCategories"/>
+		</on-render>
 		<transition on="next" to="selectBooks">
 			<evaluate expression="orderController.initSelectableBooks(flowScope.orderForm)"
 				result="flowScope.selectableBooks" />

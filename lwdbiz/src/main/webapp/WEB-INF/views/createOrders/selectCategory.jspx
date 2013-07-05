@@ -7,9 +7,10 @@
 	<form:form modelAttribute="orderForm" action="${flowExecutionUrl}">
 		<table style="width: 100%">
 			<tr>
-				<td width="30%"><spring:message code="label.page.category" text="category" /></td>
+				<td width="30%">
+					<spring:message code="label.page.category" text="category" /></td>
 				<td>
-					<form:select path="categoryId" items="${selectableCategories}" /></td>
+					<form:select path="${category.id}" items="${selectableCategories}" itemLabel="name" itemValue="id" /></td>
 			</tr>
 		</table>
 		<div align="right" style="margin-bottom: 20px; margin-top: 10px">

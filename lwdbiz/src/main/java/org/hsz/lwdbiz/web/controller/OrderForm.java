@@ -1,47 +1,40 @@
 package org.hsz.lwdbiz.web.controller;
 
 import java.io.Serializable;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.hsz.lwdbiz.domain.Book;
+import org.hsz.lwdbiz.domain.Category;
 
-/**
- * Form to capture all elements of a order creation flow. When all mandatory elements are filled in a new {@link Order}
- * can be created based upon info
- * 
- * @author Marten Deinum
- * @author Koen Serneels
- * 
- */
 public class OrderForm implements Serializable {
 
-	/*private Map<Book, Integer> selectedBooks = new HashMap<Book, Integer>();
+	private Map<Book, Integer> selectedBooks = new HashMap<Book, Integer>();
 
 	private Long bookId;
-	private Integer quantity;*/
-	private Long categoryId;
-	
-	private Long bookId;
-	/*private String deliveryDate;
-	private String orderDate;
+	private Integer quantity;
+	private Category category;
+	private Date deliveryDate;
+	private Date orderDate;
 
 	public void resetSelectedBooks() {
 		selectedBooks.clear();
 	}
 
-	public String getDeliveryDate() {
+	public Date getDeliveryDate() {
 		return deliveryDate;
 	}
 
-	public void setDeliveryDate(String deliveryDate) {
+	public void setDeliveryDate(Date deliveryDate) {
 		this.deliveryDate = deliveryDate;
 	}
 
-	public String getOrderDate() {
+	public Date getOrderDate() {
 		return orderDate;
 	}
 
-	public void setOrderDate(String orderDate) {
+	public void setOrderDate(Date orderDate) {
 		this.orderDate = orderDate;
 	}
 
@@ -67,21 +60,13 @@ public class OrderForm implements Serializable {
 
 	public void setBookId(Long bookId) {
 		this.bookId = bookId;
-	}*/
-
-	public Long getCategoryId() {
-		return categoryId;
 	}
 
-	public void setCategoryId(Long categoryId) {
-		this.categoryId = categoryId;
+	public Category getCategory() {
+		return category;
 	}
 
-	public Long getBookId() {
-		return bookId;
-	}
-
-	public void setBookId(Long bookId) {
-		this.bookId = bookId;
+	public void setCategory(Category category) {
+		this.category = category;
 	}
 }
